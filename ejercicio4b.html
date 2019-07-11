@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      var horas = parseInt(prompt("Ingrese el valor de la hora"));
+      var horasTrabajadas = parseInt(
+        prompt("Ingrese la cantidad de horas trabajadas")
+      );
+      var antiguedad = parseInt(prompt("ingrese los años de antiguedad"));
+      var segurosVendidos = parseInt(
+        prompt("Ingrese la cantidad seguros vendidos")
+      );
+      var seguroCaro = parseInt(prompt("ingrese valor del seguro mas caro"));
+
+      var sueldo =
+        horas * horasTrabajadas +
+        (seguroCaro / 100) * 50 +
+        ((horas * horasTrabajadas) / 100) * 20 * segurosVendidos +
+        ((horas * horasTrabajadas) / 100) * 10 * antiguedad;
+      var promedio = sueldo / horasTrabajadas;
+      //dice "un premio igual al 20% DEL SUELDO por la cantidad de seguros vendidos y otro premio igual al 10% DEL SUELDO por año de antigüedad.
+      document.write(
+        "El sueldo del empleado es de $" +
+          sueldo +
+          " y su valor por hora promedio es de $" +
+          promedio +
+          "."
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

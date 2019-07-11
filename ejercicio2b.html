@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      var valorHr = prompt("Ingrese el valor de la hora");
+      var hsTrabajadas = prompt("Ingrese la cantidad de horas trabajadas");
+      var antiguedad = prompt("ingrese los años de antiguedad");
+
+      var sueldoBase = valorHr * hsTrabajadas;
+      var sueldoAntiguo = sueldoBase + (sueldoBase / 100) * 5 * antiguedad;
+      var anualBase = sueldoBase * 12;
+      var anualAntiguo = sueldoAntiguo * 12;
+
+      if (antiguedad >= 1) {
+        document.write(
+          "El sueldo del empleado es de $" +
+            sueldoAntiguo +
+            " y su anual es de $" +
+            anualAntiguo +
+            "."
+        );
+      } else {
+        document.write(
+          "El sueldo del empleado es de $" +
+            sueldoBase +
+            " y su anual es de $" +
+            anualBase +
+            "."
+        );
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      var catetoA = parseInt(
+        prompt("ingrese el primer cateto de su triangulo")
+      );
+      var catetoB = parseInt(prompt("ingrese el  segundo de su triangulo"));
+
+      var hipotenusa2 = catetoA * catetoA + catetoB * catetoB;
+      var hipotenusa = Math.sqrt(hipotenusa2);
+      var perimetro = catetoA + catetoB + hipotenusa;
+      var area = (catetoA * catetoB) / 2;
+
+      document.write(
+        "El perimetro del triangulo es de " +
+          perimetro +
+          " y el area es de " +
+          area +
+          "."
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

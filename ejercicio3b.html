@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      var sueldoBase = parseInt(prompt("Ingrese el valor del sueldo base"));
+      var segurosVendidos = parseInt(
+        prompt("Ingrese la cantidad seguros vendidos")
+      );
+      var seguroCaro = parseInt(prompt("ingrese valor del seguro mas caro"));
+
+      var sueldo =
+        sueldoBase + (seguroCaro / 100) * 25 + (segurosVendidos / 100) * 15;
+
+      document.write("El sueldo del empleado es de $" + sueldo + ".");
+    </script>
+  </head>
+  <body></body>
+</html>
