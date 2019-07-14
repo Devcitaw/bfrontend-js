@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <script>
-      var letra = prompt("ingrese una letra");
-      var mensaje = null;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            var extremoMenor = parseInt(prompt('Ingrese el número menor del rango'));
+            var extremoMayor = parseInt(prompt('Ingrese el número mayor del rango'));
+            var numero = parseInt(prompt('Ingrese el número a evaluar'));
 
-      switch (letra) {
-        case "a":
-          mensaje = "es una vocal";
-          break;
-        case "e":
-          mensaje = "es una vocal";
-          break;
-        case "i":
-          mensaje = "es una vocal";
-          break;
-        case "o":
-          mensaje = "es una vocal";
-          break;
-        case "u":
-          mensaje = "es una vocal";
-          break;
-        default:
-          mensaje = "Es una consonante";
-      }
+            var rango = extremoMayor - extremoMenor;
 
-      document.write(mensaje);
+            if (rango >= 5) {
+                if (numero >= extremoMenor && numero <= extremoMayor) {
+                    if (numero % 2 == 0) {
+                        document.write('El número ingresado se encuentra en el rango es par');
+                    }
+                } else {
+                    if (numero % 2 != 0) {
+                        document.write('El número es impar');
+                    }
+                }
+            }
 
-      //   si no pone UNA letra no sirve...... oh well!!
-    </script>
-  </head>
-  <body></body>
+            // el ELSE no es necesario, de hecho el ejercicio no lo solicita. El programa falla y listo.
+        </script>
+    </head>
+    <body></body>
 </html>
