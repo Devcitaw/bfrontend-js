@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <script>
+      var ladoA = parseInt(prompt("Ingrese un número"));
+      var ladoB = parseInt(prompt("Ingrese otro número"));
+      var ladoC = parseInt(prompt("Ingrese otro número mas"));
+
+      if (ladoA == ladoB && ladoB == ladoC) {
+        document.write("es equilatero");
+      } else if (ladoA != ladoB && ladoA != ladoC && ladoB != ladoC) {
+        document.write("es escaleno");
+      } else {
+        document.write("es isoceles");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

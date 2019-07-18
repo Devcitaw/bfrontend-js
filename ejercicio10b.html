@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <script>
+      var valorA = parseInt(prompt("Ingrese un número"));
+      var valorB = parseInt(prompt("Ingrese otro número"));
+      var operador = prompt("Ingrese un operador (+, -, *, /, %)");
+
+      var resultado;
+
+      switch (operador) {
+        case "+":
+          resultado = valorA + valorB;
+          document.write("Ud eligio suma, el resultado es: " + resultado);
+          break;
+        case "-":
+          resultado = valorA - valorB;
+          document.write("Ud eligio resta, el resultado es: " + resultad);
+          break;
+        case "*":
+          resultado = valorA * valorB;
+          document.write(
+            "Ud eligio multiplicacion, el resultado es: " + resultado
+          );
+          break;
+        case "/":
+          resultado = valorA / valorB;
+          document.write("Ud eligio division, el resultado es: " + resultado);
+          break;
+        case "%":
+          resultado = valorA % valorB;
+          document.write("Ud eligio restp, el resultado es: " + resultado);
+          break;
+        default:
+          document.write("La operacion elegida es invalida");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
