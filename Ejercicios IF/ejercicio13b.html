@@ -1,45 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
 
-    <script>
-      var valorHora = parseFloat(prompt("Ingrese el valor de la hora"));
-      var horasTrabajadas = parseFloat(
-        prompt("Ingrese la cantidad de horas trabajadas")
-      );
-      var antiguedad = parseFloat(prompt("Ingrese sus años de antiguedad"));
+        <script>
+            var valorHora = parseFloat(prompt('Ingrese el valor de la hora'));
+            var horasTrabajadas = parseFloat(prompt('Ingrese la cantidad de horas trabajadas'));
+            var antiguedad = parseFloat(prompt('Ingrese sus años de antiguedad'));
 
-      var sueldoBase = valorHora * horasTrabajadas;
-      var bonoAntiguedad = (sueldoBase / 100) * 10;
-      var bonoHoras;
+            var sueldoBase = valorHora * horasTrabajadas;
+            var bonoAntiguedad = (sueldoBase / 100) * 10;
+            var bonoHoras;
 
-      //   switch (horasTrabajadas) {
-      //     case horasTrabajadas >= 110:
-      //       bonoHoras = (sueldoBase / 100) * 5;
-      //       break;
-      //     case horasTrabajadas >= 220:
-      //       bonoHoras = (sueldoBase / 100) * 10;
-      //     default:
-      //       bonoHoras = 0;
-      //       break;
-      //   }
+            if (horasTrabajadas >= 110 && horasTrabajadas <= 220) {
+                bonoHoras = (sueldoBase / 100) * 5;
+            } else if (horasTrabajadas >= 220) {
+                bonoHoras = (sueldoBase / 100) * 10;
+            }
 
-      if (horasTrabajadas >= 110 && horasTrabajadas <= 220) {
-        bonoHoras = (sueldoBase / 100) * 5;
-      } else if (horasTrabajadas >= 220) {
-        bonoHoras = (sueldoBase / 100) * 10;
-      }
+            sueldoFinal = sueldoBase + bonoAntiguedad + bonoHoras;
 
-      sueldoFinal = sueldoBase + bonoAntiguedad + bonoHoras;
+            console.log(sueldoBase, bonoAntiguedad, bonoHoras);
 
-      console.log(sueldoBase, bonoAntiguedad, bonoHoras);
-
-      document.write("el sueldo del empleado es de: " + sueldoFinal);
-    </script>
-  </head>
-  <body></body>
+            document.write('el sueldo del empleado es de: ' + sueldoFinal);
+        </script>
+    </head>
+    <body></body>
 </html>

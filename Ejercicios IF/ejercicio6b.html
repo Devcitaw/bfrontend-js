@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <script>
-      var numero = parseInt(prompt("ingrese un numero"));
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            var numero = parseInt(prompt('ingrese un numero'));
 
-      if (numero % 3 == 0 && numero % 5 == 0) {
-        document.write("el número es multiplo de ambos");
-      } else if (numero % 3 == 0) {
-        document.write("el número es multiplo de 3");
-      } else if (numero % 5 == 0) {
-        document.write("el número es multiplo de 5");
-      } else {
-        document.write("el número no es multiplo ni de 3 ni de 5");
-      }
-    </script>
-  </head>
-  <body></body>
+            if (numero % 3 == 0 && numero % 5 == 0) {
+                document.write('el número es multiplo de ambos');
+            } else if (numero % 3 == 0) {
+                document.write('el número es multiplo de 3');
+            } else if (numero % 5 == 0) {
+                document.write('el número es multiplo de 5');
+            } else {
+                document.write('el número no es multiplo ni de 3 ni de 5');
+            }
+
+            // otra forma de escribirlo (más optima) es:
+            // if (numero % 3 == 0) {
+            //     if (numero % 5 == 0) {
+            //         document.write('el número es multiplo de ambos');
+            //     } else {
+            //         document.write('el número es multiplo de 3');
+            //     }
+            // } else if (numero % 5 == 0) {
+            //     document.write('el número es multiplo de 5');
+            // } else {
+            //     document.write('el número no es multiplo ni de 3 ni de 5');
+            // haciendo esto ya comprobé al principio si es de 3 y no lo tengo que volver a comprobar, y ya compruebo si es de ambos o no,
+        </script>
+    </head>
+    <body></body>
 </html>

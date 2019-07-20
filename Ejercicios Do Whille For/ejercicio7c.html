@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            var primerNumero;
+            var segundoNumero;
+            var operador;
+            var resultado;
+
+            do {
+                do {
+                    primerNumero = parseInt(prompt('ingrese un número'));
+                } while (isNaN(primerNumero));
+                do {
+                    operador = prompt('Ingrese la operacion que quiere realizar');
+                } while (operador != '+' && operador != '-' && operador != '*' && operador != '/' && operador != '%');
+                segundoNumero = parseInt(prompt('ingrese otro número'));
+                switch (operador) {
+                    case '+':
+                        resultado = primerNumero + segundoNumero;
+                        break;
+                    case '-':
+                        resultado = primerNumero - segundoNumero;
+                        break;
+                    case '*':
+                        resultado = primerNumero * segundoNumero;
+                        break;
+                    case '/':
+                        resultado = primerNumero / segundoNumero;
+                        break;
+                    case '%':
+                        resultado = primerNumero % segundoNumero;
+                        break;
+                    default:
+                        resultado = 'El resultado es invalido';
+                }
+                document.write(primerNumero + operador + segundoNumero + ' = ' + resultado + '<br>');
+                var continuar = confirm('¿Desea realizar otra operación?');
+            } while (continuar);
+        </script>
+    </head>
+    <body></body>
+</html>
