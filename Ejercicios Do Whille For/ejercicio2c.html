@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <script>
+      for (var i = 0; i < 15; i++) {
+        var number = parseInt(prompt("Ingrese un número"));
+        if (number % 5 == 0 && number % 3 == 0) {
+          document.write(
+            "El número ingresado es " + number + " y es multiplo de anbos.<br>"
+          );
+        } else if (number % 3 == 0) {
+          document.write(
+            "El número ingresado es " + number + " y es multiplo de tres.<br>"
+          );
+        } else if (number % 5 == 0) {
+          document.write(
+            "El número ingresado es " + number + " y es multiplo de 5.<br>"
+          );
+        } else {
+          document.write(
+            "El número ingresado es " +
+              number +
+              " y no es multiplo ni de 3 ni de 5.<br>"
+          );
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
