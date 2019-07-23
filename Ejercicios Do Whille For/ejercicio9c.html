@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    Se le solicita al usuario que ingrese las notas del parcial de los alumnos
+    de una comisión. Se desconoce la cantidad de alumnos. Realice el algoritmo
+    para informar: La cantidad de alumnos aprobados (nota igual o superior a 4)
+    La cantidad de alumnos desaprobados (nota inferior a 4). El promedio de las
+    notas. El porcentaje de alumnos aprobados. Todas las notas deben ser
+    validados. Tenga en cuenta que solamente las notas pueden ir del 1 al 10.
+
+    <script>
+      var nota;
+      var promedio;
+      var aprobado;
+
+      do {
+        do {
+          nota = parseInt(prompt("Ingrese la nota del usuario"));
+        } while (isNaN(nota) && nota > 1 && nota < 10);
+
+        var continuar = confirm("¿Desea realizar otra operación?");
+      } while (continuar);
+
+      //necesito que nota sea un array, porque necesito que guarde multiples valores.
+      //Posterior a eso, fuera del do while puedo hacer el calculo de promedio y aprobado.
+    </script>
+  </head>
+  <body></body>
+</html>

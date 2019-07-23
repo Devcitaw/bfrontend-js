@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      var nombre;
+      var apellido;
+      var nota;
+
+      do {
+        do {
+          nombre = prompt("Ingrese el nombre del usuario");
+        } while (!nombre);
+        do {
+          apellido = prompt("Ingrese el apellido del usuario");
+        } while (!apellido);
+        do {
+          nota = parseInt(prompt("Ingrese la nota del usuario"));
+        } while (isNaN(nota));
+        if (nota >= 1 && nota <= 10) {
+          if (nota != 7) {
+            if (nota > 7) {
+              document.write(
+                "La nota de " + nombre + " " + apellido + " es mayor a 7. <br>"
+              );
+            } else {
+              document.write(
+                "La nota de " + nombre + " " + apellido + " es menor a 7. <br>"
+              );
+            }
+          } else {
+            document.write(
+              "La nota de " + nombre + " " + apellido + " es 7. <br>"
+            );
+          }
+        } else {
+          alert("La nota ingresada no es valida <br>");
+        }
+
+        var continuar = confirm("Desea continuar ingresando numeros?");
+      } while (continuar);
+    </script>
+  </head>
+  <body></body>
+</html>

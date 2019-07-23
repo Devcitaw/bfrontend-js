@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <script>
+      var nombre;
+      var valorHr;
+      var hsTrabajadas;
+      var sueldo;
+
+      do {
+        nombre = prompt("Ingrese el nombre del empleado");
+        do {
+          valorHr = prompt("Ingrese el valor de la hora");
+        } while (isNaN(valorHr));
+        do {
+          hsTrabajadas = prompt("Ingrese la cantidad de horas trabajadas");
+        } while (isNaN(hsTrabajadas));
+        sueldo = valorHr * hsTrabajadas;
+        document.write(
+          "El sueldo del " + nombre + " es de $" + sueldo + "<br>"
+        );
+        var continuar = confirm("Desea continuar ingresando numeros?");
+      } while (continuar);
+    </script>
+  </head>
+  <body></body>
+</html>
