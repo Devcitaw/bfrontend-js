@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    Luego, recorrecor el array mostrando la posición y el valor guardado en la
-    misma
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
 
-    <script>
-      var numero;
-      var lista;
-      var r;
-      var cantidadVueltas = 0;
+        <script>
+            var numero;
+            var lista;
+            var r;
+            var cantidadVueltas = 0;
 
-      do {
-        do {
-          numero = parseFloat(prompt("Ingrese un numero"));
-          if (isNaN(numero)) {
-            alert("EL VALOR INGRESADO NO ES UN NUMERO. Intente nuevamente.");
-          }
-        } while (isNaN(numero));
+            do {
+                do {
+                    numero = parseFloat(prompt('Ingrese un numero'));
+                    if (isNaN(numero)) {
+                        alert('EL VALOR INGRESADO NO ES UN NUMERO. Intente nuevamente.');
+                    }
+                } while (isNaN(numero));
 
-        if (cantidadVueltas == 0) {
-          lista = [numero];
-        } else {
-          lista.push(numero);
-        }
+                if (cantidadVueltas == 0) {
+                    lista = [numero];
+                } else {
+                    lista.push(numero);
+                }
 
-        cantidadVueltas++;
-        r = confirm("¿Desea seguir ingresando notas?");
-      } while (r);
+                cantidadVueltas++;
+                r = confirm('¿Desea seguir ingresando notas?');
+            } while (r);
 
-      document.write(lista);
-      console.log(lista);
-    </script>
-  </head>
-  <body></body>
+            for (var i = 0; i < lista.length; i++) {
+                document.write('usted ingreso el numero ' + lista[i] + ' en la posicion ' + lista.indexOf(lista[i]) + '<br>');
+            }
+        </script>
+    </head>
+    <body></body>
 </html>
