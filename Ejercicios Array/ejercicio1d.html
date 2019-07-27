@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        Estos valores deben ser cargados en un array. Luego, recorrecor el array mostrando la posición y el valor guardado en la misma
+
+        <script>
+            var numero;
+            var lista;
+            var r;
+
+            do {
+                do {
+                    numero = parseFloat(prompt('Ingrese un numero'));
+                    if (isNaN(numero)) {
+                        alert('EL VALOR INGRESADO NO ES UN NUMERO. Intente nuevamente.');
+                    }
+                } while (isNaN(numero));
+
+                r = confirm('¿Desea seguir ingresando notas?');
+            } while (r);
+
+            console.log(lista);
+            console.log(numero);
+        </script>
+    </head>
+    <body></body>
+</html>

@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <script>
-      var extremoMenor;
-      var extremoMayor;
-      var rango;
-      var numero;
-      do {
-        extremoMenor = parseInt(prompt("Ingrese el rango menor"));
-      } while (isNaN(extremoMenor));
-      do {
-        extremoMayor = parseInt(prompt("Ingrese el rango mayor"));
-      } while (isNaN(extremoMayor));
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            var extremoMenor;
+            var extremoMayor;
+            var rango;
+            var numero;
+            var mayorNumero;
+            var menorNumero;
+            var cantidadVueltas = 0;
 
-      rango = extremoMayor - extremoMenor;
+            do {
+                extremoMenor = parseInt(prompt('Ingrese el rango menor'));
+            } while (isNaN(extremoMenor));
+            do {
+                extremoMayor = parseInt(prompt('Ingrese el rango mayor'));
+            } while (isNaN(extremoMayor));
 
-      if (rango >= 10) {
-        2;
-        do {
-          do {
-            numero = parseInt(prompt("Ingrese un numero"));
-          } while (isNaN(numero));
+            rango = extremoMayor - extremoMenor;
 
-          if (numero >= extremoMenor && numero <= extremoMayor) {
-            if (numero % 2 == 0) {
-              document.write(
-                "El número ingresado se encuentra en el rango y es par <br>"
-              );
+            if (rango >= 10) {
+                do {
+                    do {
+                        numero = parseInt(prompt('Ingrese un numero'));
+                    } while (isNaN(numero));
+
+                    if (numero >= extremoMenor && numero <= extremoMayor) {
+                        if (numero % 2 == 0) {
+                            document.write('El número ingresado se encuentra en el rango y es par <br>');
+                        } else {
+                            document.write('El número ingresado se encuentra en el rango y es impar <br>');
+                        }
+                    } else {
+                        if (numero % 2 == 0) {
+                            document.write('El número ingresado no se encuentra en el rango y es par <br>');
+                        } else {
+                            document.write('El número ingresado no se encuentra en el rango y es impar <br>');
+                        }
+                    }
+
+                    if (cantidadVueltas == 0) {
+                        mayor = numero;
+                        menor = numero;
+                    } else {
+                        if (numero > mayorNumero) {
+                            mayorNumero = numero;
+                        }
+                        if (numero < menor) {
+                            menor = numero;
+                        }
+                    }
+
+                    cantidadVueltas++;
+
+                    var continuar = confirm('¿Desea realizar otra operación?');
+                } while (continuar);
             } else {
-              if (numero % 2 != 0) {
-                document.write(
-                  "El número ingresado se encuentra en el rango y es impar <br>"
-                );
-              }
+                alert('El rango es invalido. reinicie el programa');
             }
-          } else {
-            if (numero % 2 == 0) {
-              document.write(
-                "El número ingresado no se encuentra en el rango y es par <br>"
-              );
-            } else {
-              if (numero % 2 != 0) {
-                document.write(
-                  "El número ingresado no se encuentra en el rango y es impar <br>"
-                );
-              }
-            }
-          }
-          var continuar = confirm("Desea continuar ingresando numeros?"); // guarda una boolean
-        } while (continuar);
-      } else {
-        alert("El rango es invalido. reinicie el programa");
-      }
-    </script>
-  </head>
-  <body></body>
+        </script>
+    </head>
+    <body></body>
 </html>

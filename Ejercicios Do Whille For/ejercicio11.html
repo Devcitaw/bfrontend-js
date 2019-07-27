@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            var numero,
+                menor,
+                mayor,
+                sumatoriaImpares = 0,
+                cantMultiplos4y7 = 0,
+                r,
+                cantidadVueltas = 0;
+
+            do {
+                do {
+                    numero = parseFloat(prompt('Ingrese un numero'));
+                    if (isNaN(numero)) {
+                        alert('EL VALOR INGRESADO NO ES UN NUMERO. Intente nuevamente.');
+                    }
+                } while (isNaN(numero));
+                if (numero % 4 == 0 && numero % 7 == 0) {
+                    cantMultiplos4y7++;
+                }
+                if (numero % 2 != 0) {
+                    sumatoriaImpares += numero;
+                }
+
+                if (cantidadVueltas == 0) {
+                    mayor = numero;
+                    menor = numero;
+                } else {
+                    if (numero > mayor) {
+                        mayor = numero;
+                    }
+                    if (numero < menor) {
+                        menor = numero;
+                    }
+                }
+
+                cantidadVueltas++;
+                r = confirm('Desea seguir ingresando numeros.');
+            } while (r);
+
+            document.write(
+                'Usted  ingreso ' +
+                    cantMultiplos4y7 +
+                    ' numeros multiplos de 4 y 7. <br>La sumatoria de los valores impares es igual a ' +
+                    sumatoriaImpares +
+                    '.<br>El menor numero ingresado es ' +
+                    menor +
+                    ' y el mayor es ' +
+                    mayor +
+                    '.'
+            );
+        </script>
+    </head>
+    <body></body>
+</html>
