@@ -8,7 +8,7 @@
 
         <script>
             var numero;
-            var lista;
+            var lista = [];
             var r;
             var cantidadVueltas = 0;
 
@@ -20,19 +20,16 @@
                     }
                 } while (isNaN(numero));
 
-                if (cantidadVueltas == 0) {
-                    lista = [numero];
-                } else {
-                    lista.push(numero);
-                }
+                lista.push(numero);
 
-                cantidadVueltas++;
                 r = confirm('¿Desea seguir ingresando notas?');
             } while (r);
 
             for (var i = 0; i < lista.length; i++) {
                 document.write('usted ingreso el numero ' + lista[i] + ' en la posicion ' + lista.indexOf(lista[i]) + '<br>');
             }
+
+            //Lo puedo reemplazar por un forEach
         </script>
     </head>
     <body></body>
