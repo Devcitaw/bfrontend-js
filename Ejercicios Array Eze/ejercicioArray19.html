@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            let playlistNirvana = ['Smells Like Teen Spirit', 'Come As You Are', 'Heart-Shaped Box', 'Lithium'];
+            let playlistFoo = ['Everlong', 'The Pretender', 'Learn to Fly'];
+
+            let playlistCompleta = playlistNirvana.concat(playlistFoo);
+
+            console.log(`${playlistNirvana[0]}, ${playlistCompleta[1]},  ${playlistNirvana[2]}, ${playlistNirvana[3]}`);
+
+            i = 0;
+            while (i < playlistFoo.length) {
+                console.log(playlistFoo[i]);
+                i++;
+            }
+            //Ese while es = a  decir esto: for (var i=0; i<playlistFoo.length; i++){}
+            for (i = 0; i < playlistCompleta.length; i++) {
+                console.log(playlistCompleta[i]);
+            } //no es necesario usar otra letra en vez de i pero si la uso tengo que volver a iniciaizarla en 0.
+        </script>
+    </head>
+    <body></body>
+</html>

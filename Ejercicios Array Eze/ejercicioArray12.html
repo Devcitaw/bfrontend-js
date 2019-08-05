@@ -8,16 +8,29 @@
         <script>
             let concreteAndGold = [];
 
-            concreteAndGold.push('T-Shirt', 'Run', 'Make It Right');
-
-            console.log(concreteAndGold);
+            concreteAndGold.push(
+                'T-Shirt',
+                'Run',
+                'Make It Right',
+                'The Sky Is a Neighborhood',
+                'La Dee Da',
+                'Dirty Water',
+                'Arrows',
+                'Happy Ever After (Zero Hour)',
+                'Sunday Rain',
+                'The Line',
+                'Concrete and Gold'
+            );
 
             let ultimo = concreteAndGold.shift();
             let primera = concreteAndGold.pop();
 
             console.log(primera);
-
             console.log(ultimo);
+
+            concreteAndGold.unshift('T-Shirt');
+            concreteAndGold.push('Concrete and Gold');
+            console.log(concreteAndGold);
         </script>
     </head>
     <body></body>

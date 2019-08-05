@@ -6,12 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Document</title>
         <script>
-            var numeros = [6, 1, 2, 3, 4, 5];
+            var numbers = [6, 1, 34, 94, 3, 17];
+            var sum = 0;
 
-            console.log(numeros);
-            let corte = numeros.shift();
-            let agregado = numeros.push(corte);
-            console.log(numeros);
+            // codea debajo de este comentario la solucion al ejercicio
+            numbers.forEach(function(numero) {
+                sum += numero;
+            });
+            console.log(sum);
         </script>
     </head>
     <body></body>

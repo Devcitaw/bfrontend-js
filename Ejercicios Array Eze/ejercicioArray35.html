@@ -6,12 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Document</title>
         <script>
-            var numeros = [6, 1, 2, 3, 4, 5];
+            var numeros = [3, 7, 13, 99];
+            var dobles = numeros.map(function(numero) {
+                return numero * 2;
+            });
+            // codear acá la solución del ejercicio
 
-            console.log(numeros);
-            let corte = numeros.shift();
-            let agregado = numeros.push(corte);
-            console.log(numeros);
+            console.log(numeros); // [3, 7, 13, 99]
+            console.log(dobles); // [6, 14, 26, 198]
         </script>
     </head>
     <body></body>
