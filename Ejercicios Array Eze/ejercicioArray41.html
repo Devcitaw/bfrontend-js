@@ -20,11 +20,8 @@
 
             // codear acá la solución del ejercicio
 
-            let preciosFinales = productos.map(function(producto) {
-                costos.forEach(function(costo) {
-                    return agregarIVA(sumarGanancia(costo));
-                    return producto + ' ' + costo;
-                });
+            var preciosFinales = costos.map(function(costo, indice) {
+                return `${productos[indice]}  ${agregarIVA(sumarGanancia(costo))}`;
             });
 
             console.log(preciosFinales);
