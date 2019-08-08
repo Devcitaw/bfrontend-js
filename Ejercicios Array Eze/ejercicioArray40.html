@@ -8,26 +8,17 @@
 
         <script>
             var costos = [12.5, 56, 98, 45.75];
-
             var agregarIVA = function(costo) {
                 return costo * 1.21;
             };
-
             var sumarGanancia = function(costo) {
                 return costo * 1.5;
             };
-
             // codear acá la solución del ejercicio
-
+            var preciosFinales = [];
             preciosFinales = costos.map(function(costo) {
-                return costo + sumarGanancia(costo) + agregarIVA(costo);
+                return agregarIVA(sumarGanancia(costo));
             });
-
-            //claramente no es mas....pero entones no se cual es
-
-            console.log(preciosFinales);
-            // deberia mostrar
-            // [ 22.6875, 101.64, 177.87, 83.03625 ]
         </script>
     </head>
     <body></body>

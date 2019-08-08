@@ -20,6 +20,13 @@
 
             // codear acá la solución del ejercicio
 
+            let preciosFinales = productos.map(function(producto) {
+                costos.forEach(function(costo) {
+                    return agregarIVA(sumarGanancia(costo));
+                    return producto + ' ' + costo;
+                });
+            });
+
             console.log(preciosFinales);
             // deberia mostrar
             // [ "celular 22.6875", "notebook 101.64", "monitor 177.87" ]
