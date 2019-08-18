@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            var obtenerIDUsuario = function() {
+                return 50;
+            };
+
+            var usuarioValido = function() {
+                if (obtenerIDUsuario() > 30) {
+                    return false;
+                } else {
+                    return true;
+                }
+            };
+            // codear a aca abajo la solución al ejercicio
+            // crear ambas funciones según el enunciado
+
+            var elUsuarioEsValido = usuarioValido();
+
+            if (elUsuarioEsValido) {
+                console.log('El usuario es válido');
+            } else {
+                console.log('El usuario no es válido');
+            }
+        </script>
+    </head>
+    <body></body>
+</html>

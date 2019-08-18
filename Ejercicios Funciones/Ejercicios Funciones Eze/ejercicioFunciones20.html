@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            var mostrarElNumeroMasGrande = function(numero1, numero2) {
+                if (numero1 > numero2) {
+                    return `El número ${numero1} es más grande que ${numero2}`;
+                } else if (numero1 < numero2) {
+                    return `El número ${numero2} es más grande que ${numero1}`;
+                } else {
+                    return `Los dos números son iguales`;
+                }
+            };
+
+            // codear acá la función
+
+            console.log(mostrarElNumeroMasGrande(1, 5)); // El número 5 es más grande que 1
+            console.log(mostrarElNumeroMasGrande(63, 27)); // El número 63 es más grande que 27
+            console.log(mostrarElNumeroMasGrande(1, 1)); // Los dos números son iguales
+        </script>
+    </head>
+    <body></body>
+</html>

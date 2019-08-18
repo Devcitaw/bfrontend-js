@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            var calcularSumatoria = function(arr) {
+                var sum = 0;
+                sum = arr.reduce(function(total, numero) {
+                    return total + numero;
+                });
+                return sum;
+            };
+
+            // codear a aca abajo la solución al ejercicio
+
+            // CREAR calcularSumatoria
+
+            var numeros = [7, 4, 1, 8, 9, 4, 9];
+
+            console.log(calcularSumatoria(numeros)); // 42
+        </script>
+    </head>
+    <body></body>
+</html>
