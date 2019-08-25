@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            var producto = {
+                id: 'ADA-020',
+                title: 'Gubergren sed est amet voluptua',
+                price: 123.75,
+                picture: 'https://i.kinja-img.com/gawker-media/image/upload/s--53mPze4a--/c_scale,f_auto,fl_progressive,q_80,w_800/1315358249455433031.jpg',
+                condition: 'nuevo',
+                free_shipping: true,
+                location: 'Capital Federal'
+            };
+
+            var propiedades = Object.keys(producto);
+
+            for (var i = 0; i < propiedades.length; i++) {
+                var propiedad = propiedades[i];
+                console.log(`producto['${propiedad}'] -> ${producto[propiedad]}`);
+            }
+            // completá acá el código
+
+            /////
+            // RESULTADO ESPERADO
+            // producto['id'] -> ADA-020
+            // producto['title'] -> Gubergren sed est amet voluptua
+            // producto['price'] -> 123.75
+            // producto['picture'] -> https://i.kinja-img.com/gawker-media/image/upload/s--53mPze4a--/c_scale,f_auto,fl_progressive,q_80,w_800/1315358249455433031.jpg
+            // producto['condition'] -> nuevo
+            // producto['free_shipping'] -> true
+            // producto['location'] -> Capital Federal
+        </script>
+    </head>
+    <body></body>
+</html>

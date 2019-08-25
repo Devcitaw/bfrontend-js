@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            // objeto que guarda la información que quien hace la compra y que productos agregó al carrito
+            var shoppingCart = {
+                owner: {
+                    id: 123,
+                    name: 'Ada Lovelace'
+                },
+                products: [],
+                addProduct: function(producto) {
+                    this.products.push(producto);
+                },
+                getTotal: function() {
+                    return this.products.reduce(function(total, producto) {
+                        return total + producto.price;
+                    }, 0);
+                }
+            };
+
+            var productoA = {
+                id: 1,
+                title: 'At vero elitr',
+                price: 320,
+                freeShipping: true
+            };
+
+            var productoB = {
+                id: 2,
+                title: 'Dolore ipsum est eos',
+                price: 230,
+                freeShipping: false
+            };
+
+            var productoC = {
+                id: 3,
+                title: 'Lorem sadipscing tempor',
+                price: 120.5,
+                freeShipping: true
+            };
+
+            var productoD = {
+                id: 4,
+                title: 'Duo invidunt accusam',
+                price: 510,
+                freeShipping: false
+            };
+
+            var productoE = {
+                id: 5,
+                title: 'Labore accusam eirmod',
+                price: 125.99,
+                freeShipping: true
+            };
+
+            shoppingCart.addProduct(productoA);
+            shoppingCart.addProduct(productoB);
+            shoppingCart.addProduct(productoC);
+            shoppingCart.addProduct(productoE);
+            shoppingCart.addProduct(productoD);
+
+            console.log(shoppingCart.getTotal()); // 1306.49
+        </script>
+    </head>
+    <body></body>
+</html>

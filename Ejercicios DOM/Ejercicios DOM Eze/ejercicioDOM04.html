@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Atributos</title>
+        <style>
+            a {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .menu {
+                display: block;
+                width: 400px;
+                border: 1px solid black;
+                background-color: #eee;
+                padding: 5px 0 5px 10px;
+            }
+
+            a.menu {
+                color: black;
+                text-decoration: none;
+            }
+
+            a.menu:hover {
+                background-color: #ddd;
+            }
+
+            a.verde {
+                color: green;
+            }
+
+            a.azul {
+                color: blue;
+            }
+
+            a.rojo {
+                color: red;
+            }
+        </style>
+    </head>
+    <body onload="preguntar()">
+        <a href="#" class="menu">Link 1</a>
+        <a href="#" class="menu">Link 2</a>
+        <a href="#" class="menu">Link 3</a>
+        <a href="#" class="menu">Link 4</a>
+        <a href="#" class="menu">Link 5</a>
+
+        <script>
+            var vinculo = document.querySelector('a');
+
+            var color = prompt('Ingrese un color (verde, azul, rojo)');
+
+            function preguntar() {
+                if (color == 'verde') {
+                    vinculo.classList.toggle('verde');
+                } else if (color == 'azul') {
+                    vinculo.classList.toggle('azul');
+                } else if (color == 'rojo') {
+                    vinculo.classList.toggle('rojo');
+                }
+            }
+
+            console.log(color);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            var nevermind = [
+                { id: 1, nombre: 'Smells Like Teen Spirit', duracion: 302 },
+                { id: 2, nombre: 'In Bloom', duracion: 255 },
+                { id: 3, nombre: 'Come As You Are', duracion: 219 },
+                { id: 4, nombre: 'Breed', duracion: 184 },
+                { id: 5, nombre: 'Lithium', duracion: 257 }
+            ];
+
+            const duracionTotal = nevermind.reduce(function(total, cancion) {
+                return total + cancion.duracion;
+            }, 0);
+
+            duracionPromedioPorCancion = duracionTotal / nevermind.length;
+
+            console.log(duracionTotal); // 1217
+            console.log(duracionPromedioPorCancion); // 243.4
+        </script>
+    </head>
+    <body></body>
+</html>

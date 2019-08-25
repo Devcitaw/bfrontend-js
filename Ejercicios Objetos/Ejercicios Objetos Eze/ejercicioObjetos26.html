@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script>
+            // TODO: agregar en el objeto el método addSong, que recibe como parámetro el nombre de una canción a agregar en el array songs
+            var playlist = {
+                name: 'Rupaul Lipsyncs',
+                owner: 'Ada',
+                followers: 8743,
+                songs: [],
+                addSong: function(song) {
+                    this.songs.push(song);
+                }
+            };
+
+            playlist.addSong('Geronimo');
+            playlist.addSong('Sissy That Walk');
+            playlist.addSong('Cover Girl');
+
+            // TODO: utilizando el método que creamos antes, agrega las siguientes tres canciones utilizando el método playlist.addSong
+            // 'Geronimo'
+            // 'Sissy That Walk'
+            // 'Cover Girl'
+
+            console.log(playlist.songs); // [ 'Geronimo', 'Sissy That Walk', 'Cover Girl' ]
+        </script>
+    </head>
+    <body></body>
+</html>

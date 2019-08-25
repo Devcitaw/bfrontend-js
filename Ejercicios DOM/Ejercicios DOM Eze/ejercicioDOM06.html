@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Establecer Atributos</title>
+        <style>
+            .negrita {
+                font-weight: bold;
+            }
+            .tachado {
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="principal">Jugando con atributos</h1>
+        <div>De a poco vamos teniendo control sobre nuestros documentos!!!</div>
+        <script>
+            var titulo = document.querySelector('h1');
+
+            var div = document.querySelector('div');
+
+            function tachado(elemento) {
+                if (elemento.hasAttributes()) {
+                    elemento.classList.add('tachado');
+                } else {
+                    elemento.classList.add('negrita');
+                }
+            }
+
+            tachado(titulo);
+            tachado(div);
+        </script>
+    </body>
+</html>
+
+Si alguno de los dos elementos tiene atributos entonces Agregar la clase tachado Sino Agregar la clase negrita
