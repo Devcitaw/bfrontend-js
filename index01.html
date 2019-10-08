@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var alumnes = [];
+
+            do {
+                var alumno = {};
+                //do {
+                //    numero = parseFloat(prompt('Ingrese un numero'));
+                //    if (isNaN(numero)) {
+                //        alert('EL VALOR INGRESADO NO ES UN NUMERO. Intente nuevamente.');
+                //    }
+                //} while (isNaN(numero));
+
+                //EL PROMPT SIEMPRE DEVUELE STRING ASI QUE SOLO VALIDAR QUE NO ESTE VACIO
+
+                var nombreCompleto = prompt('Ingrese el nombre del alumno'); //no puede estar vacio
+                var legajo = prompt('Ingrese el numero de legajo del alumno'); //hacer un do para esto con un while mientras lo ingresado sea NaN y un alert que diga "el legajo debe ser solo numeros". Nunca puede ser menor a 1.
+                var notas = [];
+                do {
+                    var materia = {};
+                    materia.nombreMateria = prompt('Ingrese el nombre de la materia'); // no puede estar vacio.
+                    materia.nota = parseInt(prompt('Ingrese la nota de la materia: ' + materia.nombreMateria)); // hacer un do/while con un alert para que asegurar que la nota ingresada este entre 1 y 10. Tambien asegurarse de que ponga un numero.
+                    notas.push(materia);
+                    var r = confirm('desea ingresar otra materia?');
+                } while (r);
+
+                alumno.nombreCompleto = nombreCompleto; // o directamentente =  prompt('ingrese el apellido'); y no creo la variable arriba
+                alumno.legajo = legajo;
+                alumno.notas = notas;
+                alumnes.push(alumno);
+                var r = confirm('desea ingresar otro alumno?');
+            } while (r);
+
+            console.log(alumnes);
+
+            //NO HACER LA PARTE DE AGREGADOS
+        </script>
+    </body>
+</html>

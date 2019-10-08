@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
 
-    <script>
-      var numer;
+        <script>
+            var number;
 
-      do {
-        do {
-          number = parseInt(prompt("ingrese un número"));
-        } while (isNaN(number));
-        if (number == 0) {
-          document.write("El número ingresado es " + number + " y es 0.<br>");
-        } else if (number % 2 == 0) {
-          document.write("El número ingresado es " + number + " y es par.<br>");
-        } else {
-          document.write(
-            "El número ingresado es " + number + " y es impar.<br>"
-          );
-        }
-        var continuar = confirm("¿Desea realizar otra operación?");
-      } while (continuar);
-    </script>
-  </head>
-  <body></body>
+            do {
+                do {
+                    number = parseInt(prompt('ingrese un número'));
+                } while (isNaN(number));
+                if (number == 0) {
+                    document.write('El número ingresado es ' + number + ' y es 0.<br>');
+                } else if (number % 2 == 0) {
+                    document.write('El número ingresado es ' + number + ' y es par.<br>');
+                } else {
+                    document.write('El número ingresado es ' + number + ' y es impar.<br>');
+                }
+                var continuar = confirm('¿Desea realizar otra operación?');
+            } while (continuar);
+        </script>
+    </head>
+    <body></body>
 </html>
