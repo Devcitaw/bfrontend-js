@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var body = document.querySelector("body");
+
+      var lista = document.createElement("ul");
+
+      i = 1;
+
+      do {
+        var nombre = prompt("Ingrese un nombre");
+        var item = document.createElement("li");
+        item.innerHTML = nombre;
+        item.style;
+        if (i % 2 == 0) {
+          item.style.color = "#ddd";
+        } else {
+          item.style.color = "#eee";
+        }
+        //Si el número de item es par entonces le asignamos un color #ddd
+        //Si el número de item es inpar entonces le asignamos un color #eee
+        lista.appendChild(item);
+        i++;
+        var r = confirm("desea ingresar otro nombre?");
+      } while (r);
+
+      body.appendChild(lista);
+    </script>
+  </body>
+</html>
